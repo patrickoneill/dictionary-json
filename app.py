@@ -10,6 +10,10 @@ def translate(w):
     
     if w in data:
         return data[w]
+    elif w.title() in data:
+        return data[w.title()]
+    elif w.upper() in data:
+        return data[w.upper()]
     elif len(near) > 0:
         yn = input("Did you mean %s instead? Enter Y if yes, or N if no: " % near[0])
         if yn == "Y":
